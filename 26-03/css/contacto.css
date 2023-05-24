@@ -1,0 +1,162 @@
+/* Menú */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(Imagenes/fondo.jpg);
+    
+}
+
+ /* Menú */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: bold;
+}
+
+/* Texto "Rythm" */
+h1 {
+    color: white;
+    font-size: 45px;
+}
+
+/* Alinear las listas */
+ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+/* Color del texto y al pasar sobre el texto */
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: aqua;
+}
+
+
+ /* Contacto */
+ h5 {
+    color: white;
+ }
+
+ .form{
+    width:340px;
+    height:440px;
+    background:#e6e6e6;
+    border-radius:8px;
+    margin:50px; 
+    padding:20px 30px;
+    max-width:350px;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+    position:relative
+}
+
+h2{
+    margin:10px 0;
+    padding-bottom:10px;
+    width:180px;
+    color:#78788c;
+    border-bottom:3px solid #78788c
+}
+
+input{
+    width:100%;
+    padding:10px;
+    box-sizing:border-box;
+    background:none;
+    outline:none;
+    resize:none;
+    border:0;
+    font-family:'Montserrat',sans-serif;
+    transition:all .3s;
+    border-bottom:2px solid #bebed2
+}
+
+input:focus{
+    border-bottom:2px solid #78788c
+}
+
+p:before{
+    content:attr(type);
+    display:block;
+    margin:28px 0 0;
+    font-size:14px;
+    color:#5a5a5a
+}
+
+button{
+    float:right;
+    padding:8px 12px;
+    margin:8px 0 0;
+    font-family:'Montserrat',sans-serif;
+    border:2px solid #78788c;
+    background:0;
+    color:#5a5a6e;
+    cursor:pointer;
+    transition:all .3s
+}
+
+button:hover{
+    background:#78788c;
+    color:#fff
+}
+
+div{
+    position:absolute;
+    bottom:0px;
+    right:-20px;
+    color: black;
+    width:320px;
+    padding:10px 0px 10px 0;
+    border-radius:6px;
+    font-size:13px;
+}
+
+span{
+    margin:0 5px 0 15px
+}
+
+div.card {
+    padding-bottom: 0px;
+    position: relative;
+    left: 25%;
+    bottom: 50px;
+}
+
+/* Mapa */
+
+.mapa{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    left: 50%;
+    bottom: 563px;
+}
+
+.mapa iframe{
+    left:0;
+    top:0;
+    height:55%;
+    width:100%;
+    position:absolute;
+}
+
+h3 {
+    position: relative;
+    left: 54%;
+    bottom: 50px;
+    margin:10px;
+    width:180px;
+    color:#78788c;
+    border-bottom:3px solid #78788c
+}

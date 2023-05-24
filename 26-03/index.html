@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rythm</title>
+    <link rel="shortcut icon" href="img-html/icono.png">
+
+    <script>
+        function validarFormulario() {
+          // Obtener los valores de los campos del formulario
+          var nombre = document.getElementById("nombre").value;
+          var correo = document.getElementById("correo").value;
+          var fechaNacimiento = document.getElementById("fecha-nacimiento").value;
+          var telefono = document.getElementById("telefono").value;
+          var direccion = document.getElementById("direccion").value;
+    
+          // Validar que los campos no estén vacíos
+          if (nombre === "" || correo === "" || fechaNacimiento === "" || telefono === "" || direccion === "") {
+            alert("Por favor, completa todos los campos");
+            return false;
+          }
+    
+          // Validar el formato del correo electrónico
+          var emailRegex = /^\S+@\S+\.\S+$/;
+          if (!emailRegex.test(correo)) {
+            alert("Por favor, ingresa un correo electrónico válido");
+            return false;
+          }
+    
+          // Validar que la fecha de nacimiento sea una fecha válida
+          if (!isValidDate(fechaNacimiento)) {
+            alert("Por favor, ingresa una fecha de nacimiento válida");
+            return false;
+          }
+    
+          // Validar que el teléfono sea un número válido
+          var phoneRegex = /^\d{10}$/;
+          if (!phoneRegex.test(telefono)) {
+            alert("Por favor, ingresa un número de teléfono válido (10 dígitos)");
+            return false;
+          }
+    
+          // Si todos los campos son válidos, puedes hacer algo con los datos (enviarlos a un servidor, etc.)
+          alert("¡Formulario enviado correctamente!");
+          return true;
+        }
+    
+        function isValidDate(dateString) {
+          var regEx = /^\d{4}-\d{2}-\d{2}$/;
+          if (!dateString.match(regEx)) return false; // Formato inválido
+          var d = new Date(dateString);
+          var dNum = d.getTime();
+          if (!dNum && dNum !== 0) return false; // Fecha inválida (no números)
+          return d.toISOString().slice(0, 10) === dateString;
+        }
+      </script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Rythm</h1>
+            <ul>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <form onsubmit="return validarFormulario()">
+    <section class="container">
+        <p><strong><h3>Nombre Completo</h3></strong></p>
+        <input type="text" id="nombre" required placeholder="Pepito Perez">
+            
+        <p><strong><h3>Correo Electronico</h3></strong></p>
+        <input type="email" id="correo" required placeholder="alguien@example.com">
+            
+        <p><strong><h3>Fecha De Nacimiento</h3></strong></p>
+        <input type="date" id="fecha-nacimiento" required placeholder="mm/dd/yyyy">
+    
+        <p><strong><h3>Telefono</h3></strong></p>
+        <input type="tel" id="telefono" required placeholder="5557776">
+            
+        <p><strong><h3>Direccion</h3></strong></p>
+        <input type="text" id="direccion" required placeholder="Cra 22 #22c -22">
+
+    
+    <div class="boton2">    
+        <form action="about.html">
+      <button type="submit" value="Enviar">Guardar</button>
+    </form>
+  </section>
+
+  <footer>
+    <ul>
+        <li>
+            <h2 class="letra-blanca">¿Como me puedo suscribir?</h2>
+                <p>Solo debes añadir tu nombre y correo en el formulario de la parte superior.</p>
+        </li>
+        <li>
+            <h2 class="letra-blanca">Gratis para todos</h2>
+                <p>La música es esencial para todo el mundo. 
+                Creamos Rythm para que todas las personas tengan la oportunidad de aprender música, 
+                de manera gratuita y para siempre. </p>
+        </li>
+        <li>
+            <h2 class="letra-blanca">¿Necesito saber musica?</h2>
+                <p>No necesitas ningún conocimiento musical previo, pero sí muchas ganas de aprender.</p>
+        </li>
+    </ul>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/quiz.css">
+    <script src="js/quiz.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rythm</title>
+    <link rel="shortcut icon" href="img-html/icono.png">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Quiz</h1>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>¡Este es un pequeño Quiz de cultura general sobre la música!</h1>
+
+
+<form id = "quiz" name = "quiz">
+
+
+<p class = "questions">1. ¿Quién compuso la famosa sinfonía "La Novena"?</p>
+<input type = "radio" id = "mc" name = "question1" value = "Ludwig van Beethoven"> Ludwig van Beethoven<br>
+<input type = "radio" id = "mc" name = "question1" value = "Vivaldi"> Vivaldi<br>
+<input type = "radio" id = "mc" name = "question1" value = "Johann Sebastian Bach"> Johann Sebastian Bach<br>
+
+<p class = "questions">2. ¿Cuál es el instrumento de viento más pequeño de la orquesta?</p>
+<input type = "radio" id = "mc" name = "question2" value = "Tuba"> Tuba<br>
+<input type = "radio" id = "mc" name = "question2" value = "La flauta"> La flauta<br>
+<input type = "radio" id = "mc" name = "question2" value = "Armónica"> Armónica<br>
+
+<p class = "questions">3. ¿Cuál es el género musical característico de Jamaica?</p>
+
+<input type = "radio" id = "mc" name = "question3" value = "El reggae"> El reggae<br>
+<input type = "radio" id = "mc" name = "question3" value = "Afrobeat"> Afrobeat<br>
+<input type = "radio" id = "mc" name = "question3" value = "Afropop"> Afropop<br>
+
+<p class = "questions">4. ¿Quién es conocido como el "Rey del Pop"?</p>
+
+<input type = "radio" id = "mc" name = "question4" value = "David Bowie"> David Bowie<br>
+<input type = "radio" id = "mc" name = "question4" value = "Freddie Mercury"> Freddie Mercury<br>
+<input type = "radio" id = "mc" name = "question4" value = "Michael Jackson"> Michael Jackson<br>
+
+<p class = "questions">5. ¿Cuál es el instrumento principal en una banda de rock?</p>
+
+<input type = "radio" id = "mc" name = "question5" value = "La batería"> La batería<br>
+<input type = "radio" id = "mc" name = "question5" value = "La guitarra eléctrica"> La guitarra eléctrica<br>
+<input type = "radio" id = "mc" name = "question5" value = "El bajo"> El bajo<br>
+
+<p class = "questions">6. ¿Cuál es el nombre del vocalista de la banda británica Coldplay?</p>
+
+<input type = "radio" id = "mc" name = "question6" value = "Will Champion"> Will Champion<br>
+<input type = "radio" id = "mc" name = "question6" value = "Chris Martin"> Chris Martin<br>
+<input type = "radio" id = "mc" name = "question6" value = "Jon Buckland"> Jon Buckland<br>
+
+<p class = "questions">7. ¿Cuál es el término musical que describe la velocidad de una pieza?</p>
+
+<input type = "radio" id = "mc" name = "question7" value = "Latido"> Latido<br>
+<input type = "radio" id = "mc" name = "question7" value = "Pulsaciones"> Pulsaciones<br>
+<input type = "radio" id = "mc" name = "question7" value = "El tempo"> El tempo<br>
+
+<p class = "questions">8. ¿Cuál es el género musical originario de Brasil?</p>
+
+<input type = "radio" id = "mc" name = "question8" value = "Chachachá"> Chachachá<br>
+<input type = "radio" id = "mc" name = "question8" value = "La samba"> La samba<br>
+<input type = "radio" id = "mc" name = "question8" value = "Bolero"> El Bolero<br>
+
+
+
+
+<input id = "button" type = "button" value = "¡Terminé!" onclick = "check();">
+
+</form>
+
+<div id = "after_submit">
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<img id = "picture">
+</div>
+</body>
+</html>
